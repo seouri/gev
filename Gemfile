@@ -14,6 +14,8 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 
+gem 'thin'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -22,6 +24,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :development do
+  gem 'foreman'
+end
 
 group :test do
   # Pretty printed test output
