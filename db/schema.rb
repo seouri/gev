@@ -36,8 +36,10 @@ ActiveRecord::Schema.define(:version => 20110610175512) do
     t.integer "snp_count"
     t.integer "kn_count"
     t.integer "lit_count"
-    t.integer "total_count"
+    t.integer "evidence_total_count"
   end
+
+  add_index "gene_summaries", ["evidence_types_count", "evidence_total_count"], :name => "index_gene_summaries_on_evidence_types_and_evidence_total"
 
   create_table "genes", :force => true do |t|
     t.string  "symbol"

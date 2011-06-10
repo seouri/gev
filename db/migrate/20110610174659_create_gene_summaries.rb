@@ -13,7 +13,8 @@ class CreateGeneSummaries < ActiveRecord::Migration
       t.integer :snp_count
       t.integer :kn_count
       t.integer :lit_count
-      t.integer :total_count
+      t.integer :evidence_total_count
     end
+    add_index :gene_summaries, [:evidence_types_count, :evidence_total_count], :name => "index_gene_summaries_on_evidence_types_and_evidence_total"
   end
 end
