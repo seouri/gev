@@ -1,6 +1,8 @@
 Gev::Application.routes.draw do
   resources :genes
 
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

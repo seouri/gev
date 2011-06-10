@@ -1,0 +1,38 @@
+<h1>Home</h1>
+
+<table>
+  <tr>
+    <th>Gene</th>
+    <th>Gene Expression</th>
+    <th>CNV</th>
+    <th>SNP</th>
+    <th>Expert Knowledge</th>
+    <th>Literature</th>
+    <th>Total</th>
+    <th>Gene Expression</th>
+    <th>CNV</th>
+    <th>SNP</th>
+    <th>Expert Knowledge</th>
+    <th>Literature</th>
+    <th>Total</th>
+  </tr>
+<% @gene_summaries.each do |gs| %>
+  <tr>
+    <td><%= gs.gene.symbol %></td>
+    <td><%= gs.has_ge %></td>
+    <td><%= gs.has_cnv %></td>
+    <td><%= gs.has_snp %></td>
+    <td><%= gs.has_kn %></td>
+    <td><%= gs.has_lit %></td>
+    <td><%= gs.evidence_types_count %></td>
+    <td><%= gs.ge_count %></td>
+    <td><%= gs.cnv_count %></td>
+    <td><%= gs.snp_count %></td>
+    <td><%= gs.kn_count %></td>
+    <td><%= gs.lit_count %></td>
+    <td><%= gs.evidence_total_count %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= paginate @gene_summaries %>
