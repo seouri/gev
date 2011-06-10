@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  gene_id: 1
+  has_ge: 1
+  has_cnv: 1
+  has_snp: 1
+  has_kn: 1
+  has_lit: 1
+  evidence_types_count: 1
+  ge_count: 1
+  cnv_count: 1
+  snp_count: 1
+  kn_count: 1
+  lit_count: 1
+  total_count: 1
+
+two:
+  gene_id: 1
+  has_ge: 1
+  has_cnv: 1
+  has_snp: 1
+  has_kn: 1
+  has_lit: 1
+  evidence_types_count: 1
+  ge_count: 1
+  cnv_count: 1
+  snp_count: 1
+  kn_count: 1
+  lit_count: 1
+  total_count: 1
