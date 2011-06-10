@@ -1,0 +1,61 @@
+<%= form_for(@gene) do |f| %>
+  <% if @gene.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gene.errors.count, "error") %> prohibited this gene from being saved:</h2>
+
+      <ul>
+      <% @gene.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :symbol %><br />
+    <%= f.text_field :symbol %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :chromosome %><br />
+    <%= f.text_field :chromosome %>
+  </div>
+  <div class="field">
+    <%= f.label :strand %><br />
+    <%= f.text_field :strand %>
+  </div>
+  <div class="field">
+    <%= f.label :start_position %><br />
+    <%= f.number_field :start_position %>
+  </div>
+  <div class="field">
+    <%= f.label :end_position %><br />
+    <%= f.number_field :end_position %>
+  </div>
+  <div class="field">
+    <%= f.label :coding_start_position %><br />
+    <%= f.number_field :coding_start_position %>
+  </div>
+  <div class="field">
+    <%= f.label :coding_end_position %><br />
+    <%= f.number_field :coding_end_position %>
+  </div>
+  <div class="field">
+    <%= f.label :exon_count %><br />
+    <%= f.number_field :exon_count %>
+  </div>
+  <div class="field">
+    <%= f.label :exon_start_positions %><br />
+    <%= f.text_area :exon_start_positions %>
+  </div>
+  <div class="field">
+    <%= f.label :exon_end_positions %><br />
+    <%= f.text_area :exon_end_positions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Symbol:</b>
+  <%= @gene.symbol %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @gene.name %>
+</p>
+
+<p>
+  <b>Chromosome:</b>
+  <%= @gene.chromosome %>
+</p>
+
+<p>
+  <b>Strand:</b>
+  <%= @gene.strand %>
+</p>
+
+<p>
+  <b>Start position:</b>
+  <%= @gene.start_position %>
+</p>
+
+<p>
+  <b>End position:</b>
+  <%= @gene.end_position %>
+</p>
+
+<p>
+  <b>Coding start position:</b>
+  <%= @gene.coding_start_position %>
+</p>
+
+<p>
+  <b>Coding end position:</b>
+  <%= @gene.coding_end_position %>
+</p>
+
+<p>
+  <b>Exon count:</b>
+  <%= @gene.exon_count %>
+</p>
+
+<p>
+  <b>Exon start positions:</b>
+  <%= @gene.exon_start_positions %>
+</p>
+
+<p>
+  <b>Exon end positions:</b>
+  <%= @gene.exon_end_positions %>
+</p>
+
+
+<%= link_to 'Edit', edit_gene_path(@gene) %> |
+<%= link_to 'Back', genes_path %>

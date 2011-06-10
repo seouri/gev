@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110610174659) do
+ActiveRecord::Schema.define(:version => 20110610175512) do
 
   create_table "cytobands", :force => true do |t|
     t.string  "chromosome",     :limit => 5
@@ -38,6 +38,24 @@ ActiveRecord::Schema.define(:version => 20110610174659) do
     t.integer "lit_count"
     t.integer "total_count"
   end
+
+  create_table "genes", :force => true do |t|
+    t.string  "symbol"
+    t.string  "name"
+    t.string  "chromosome"
+    t.string  "strand"
+    t.integer "start_position"
+    t.integer "end_position"
+    t.integer "coding_start_position"
+    t.integer "coding_end_position"
+    t.integer "exon_count"
+    t.text    "exon_start_positions"
+    t.text    "exon_end_positions"
+  end
+
+  add_index "genes", ["chromosome", "end_position"], :name => "index_genes_on_chromosome_and_end_position"
+  add_index "genes", ["chromosome", "start_position"], :name => "index_genes_on_chromosome_and_start_position"
+  add_index "genes", ["symbol"], :name => "index_genes_on_symbol"
 
   create_table "histograms", :force => true do |t|
     t.integer "track_id",   :limit => 2
